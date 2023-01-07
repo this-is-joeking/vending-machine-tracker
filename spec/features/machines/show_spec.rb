@@ -9,6 +9,7 @@ RSpec.describe 'vending machine show page' do
     @snack3 = @machine1.snacks.create!(name: 'Twinkie Two Pack', price: 0.75)
     @snack4 = @machine1.snacks.create!(name: 'Bang! Energy Cola', price: 2.29)
   end
+
   it 'lists all the snacks in the machine along with their price' do
     visit machine_path(@machine1)
 
@@ -21,16 +22,15 @@ RSpec.describe 'vending machine show page' do
     end
     end
   end
+
+  it 'shows average price for all the machines snacks' do
+    visit machine_path(@machine1)
+
+    within("h3#avg_price")do
+      expect(page).to have_content("Average Price: $1.33")
+    end
+  end
 end
-
-# ```
-# User Story 1 of 3
-
-# As a visitor
-# When I visit a vending machine show page
-# I see the name of all of the snacks associated with 
-# that vending machine along with their price
-# ```
 
 # ```
 # User Story 2 of 3
