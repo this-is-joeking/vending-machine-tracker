@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2023_01_07_175925) do
   create_table "machines", force: :cascade do |t|
     t.string "location"
     t.bigint "owner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["owner_id"], name: "index_machines_on_owner_id"
   end
 
