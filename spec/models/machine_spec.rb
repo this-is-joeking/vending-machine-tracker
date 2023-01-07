@@ -27,6 +27,12 @@ RSpec.describe Machine, type: :model do
       expect(@machine3.avg_price).to eq(0)
     end
   end
-end
 
-# I also see an average price for all of the snacks in that machine
+  describe '#number_of_snacks' do
+    it 'returns the number of different snacks offered by the machine' do
+      expect(@machine1.number_of_snacks).to eq(4)
+      expect(@machine2.number_of_snacks).to eq(1)
+      expect(@machine3.number_of_snacks).to eq(0)
+    end
+  end
+end

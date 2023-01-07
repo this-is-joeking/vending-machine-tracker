@@ -31,20 +31,3 @@ RSpec.describe 'vending machine show page' do
     end
   end
 end
-
-# ```
-# User Story 2 of 3
-# ​
-# As a visitor
-# When I visit a vending machine show page
-# I also see an average price for all of the snacks in that machine
-# ```
-
-# ### Example
-# ```Don's Mixed Drinks
-# Snacks
-# * White Castle Burger: $3.50
-# * Pop Rocks: $1.50
-# * Flaming Hot Cheetos: $2.50
-# Average Price: $2.50
-# ```

@@ -5,6 +5,10 @@ class Machine < ApplicationRecord
   has_many :snacks, through: :machine_snacks
 
   def avg_price
-    snacks.average(:price).to_f
+    snacks.average(:price).to_f.round(2)
+  end
+
+  def number_of_snacks
+    snacks.count
   end
 end
